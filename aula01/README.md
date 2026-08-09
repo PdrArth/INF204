@@ -1,9 +1,8 @@
 # Pratica Laboratorial 01 - INF204
 
-## Integrantes da dupla
+## Integrante
 
-- Matricula 1: ________  Nome 1: ______________________________
-- Matricula 2: ________  Nome 2: ______________________________
+- Matrícula: 22.305  Nome: Amanda Ribeiro
 
 ## Objetivo
 
