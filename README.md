@@ -2,7 +2,7 @@
 
 ## Integrante
 
-- Matrícula: 22.305  Nome: Amanda Ribeiro
+- Matrícula: 22.305  Nome: Pedro Arthur
 
 ## Objetivo
 
