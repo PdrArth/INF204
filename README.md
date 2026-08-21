@@ -6,13 +6,12 @@
 
 ## Objetivo
 
-Aplicativo React Native com Expo contendo:
-- Tela inicial com mensagem para a turma.
-- Contador com estado (`useState`).
-- Botão para incrementar.
-- Botão para decrementar sem permitir negativo.
-- Botão para zerar.
-- Botões personalizados com `TouchableOpacity`.
+Prática Laboratorial 02 de INF204: lista de tarefas em React Native com Expo, JavaScript moderno e JSX.
+
+## Branches da prática
+
+- `feature/pratica-02`: implementação normal em JavaScript.
+- `feature/pratica-02-typescript`: desafio bônus com TypeScript.
 
 ## Como executar
 
