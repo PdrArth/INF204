@@ -13,9 +13,15 @@ Prática Laboratorial 02 de INF204: lista de tarefas em React Native com Expo, J
 - `feature/pratica-02`: implementação normal em JavaScript.
 - `feature/pratica-02-typescript`: desafio bônus com TypeScript.
 
+## Organização
+
+- `aula01`: projeto preservado da Prática 01.
+- `aula02`: projeto separado da Prática 02.
+
 ## Como executar
 
 ```bash
+cd aula02
 npm install
 npx expo start
 ```

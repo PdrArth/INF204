@@ -1,4 +1,4 @@
-# Prática Laboratorial 02 - INF204
+# Pratica Laboratorial 01 - INF204
 
 ## Integrante
 
@@ -6,22 +6,13 @@
 
 ## Objetivo
 
-Aplicativo React Native com Expo para praticar JavaScript moderno, JSX e renderização de listas.
-
-## Funcionalidades
-
-- Array de tarefas com `map()` para renderização dinâmica.
-- Renderização condicional do status `[OK]` ou `[PENDENTE]`.
-- Filtro de tarefas pendentes com `filter()`.
-- Componente reutilizável `ItemTarefa.js` com dados enviados por props.
-- Estado de tarefas com `useState`.
-- Inclusão de novas tarefas usando o operador spread (`...tarefas`).
-
-## Branch desta versão
-
-`feature/pratica-02` contém a implementação normal em JavaScript.
-
-O desafio bônus em TypeScript está isolado na branch `feature/pratica-02-typescript`.
+Aplicativo React Native com Expo contendo:
+- Tela inicial com mensagem para a turma.
+- Contador com estado (`useState`).
+- Botao para incrementar.
+- Botao para decrementar sem permitir negativo.
+- Botao para zerar.
+- Botoes personalizados com `TouchableOpacity`.
 
 ## Como executar
 
@@ -36,4 +27,6 @@ Depois, no Expo:
 
 ## Entrega
 
-Esta atividade deve ser entregue na branch `feature/pratica-02`.
+1. Criar repositorio GitHub/GitLab e fazer o primeiro commit.
+2. Enviar o link para `joaovasconcelos@univicosa.com.br`.
+3. Criar branch `pratica-01` para esta pratica.

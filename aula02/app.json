@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Prática 02",
+    "slug": "pratica-02",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": ["android", "ios", "web"]
+  }
+}

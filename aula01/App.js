@@ -1,103 +1,84 @@
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import ItemTarefa from './ItemTarefa';
-
-const tarefasIniciais = [
-  { id: 1, descricao: 'Estudar ES6+', concluida: true },
-  { id: 2, descricao: 'Configurar ambiente Expo', concluida: true },
-  { id: 3, descricao: 'Entender o funcionamento do JSX', concluida: false },
-  { id: 4, descricao: 'Finalizar Roteiro de Prática 02', concluida: false },
-];
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function App() {
-  const [tarefas, setTarefas] = useState(tarefasIniciais);
-  const tarefasPendentes = tarefas.filter((tarefa) => !tarefa.concluida);
+  const [contagem, setContagem] = useState(0);
 
-  const adicionarTarefa = () => {
-    setTarefas((tarefasAtuais) => {
-      const proximaId = tarefasAtuais.length
-        ? Math.max(...tarefasAtuais.map((tarefa) => tarefa.id)) + 1
-        : 1;
-
-      return [
-        ...tarefasAtuais,
-        {
-          id: proximaId,
-          descricao: `Nova tarefa ${proximaId}`,
-          concluida: false,
-        },
-      ];
-    });
-  };
+  const incrementar = () => setContagem((valorAtual) => valorAtual + 1);
+  const decrementar = () => setContagem((valorAtual) => Math.max(0, valorAtual - 1));
+  const zerar = () => setContagem(0);
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.ola}>Olá, Pedro Arthur!</Text>
-      <Text style={styles.titulo}>Lista de Tarefas</Text>
+    <View style={styles.container}>
+      <Text style={styles.ola}>Ola, Turma de ADS306!</Text>
 
-      <Text style={styles.subtitulo}>Todas as tarefas</Text>
-      {tarefas.map((tarefa) => (
-        <ItemTarefa key={tarefa.id} tarefa={tarefa} />
-      ))}
+      <Text style={styles.titulo}>Contagem Atual:</Text>
+      <Text style={styles.numero}>{contagem}</Text>
 
-      <Text style={styles.subtitulo}>Tarefas pendentes</Text>
-      {tarefasPendentes.length > 0 ? (
-        tarefasPendentes.map((tarefa) => (
-          <ItemTarefa key={`pendente-${tarefa.id}`} tarefa={tarefa} />
-        ))
-      ) : (
-        <Text style={styles.vazio}>Nenhuma tarefa pendente.</Text>
-      )}
+      <View style={styles.botoesContainer}>
+        <TouchableOpacity style={[styles.botao, styles.botaoIncrementar]} onPress={incrementar}>
+          <Text style={styles.botaoTexto}>Incrementar +1</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.botao} onPress={adicionarTarefa}>
-        <Text style={styles.botaoTexto}>Adicionar tarefa</Text>
-      </TouchableOpacity>
-    </ScrollView>
+        <TouchableOpacity style={[styles.botao, styles.botaoDecrementar]} onPress={decrementar}>
+          <Text style={styles.botaoTexto}>Decrementar -1</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.botao, styles.botaoZerar]} onPress={zerar}>
+          <Text style={styles.botaoTexto}>Zerar</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    backgroundColor: '#f5f5f5',
-    paddingTop: 50,
-    paddingBottom: 30,
-    paddingHorizontal: 20,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e0f7fa',
+    padding: 20
   },
   ola: {
-    color: '#20325a',
-    fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 8,
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#00695c',
+    marginBottom: 20
   },
   titulo: {
-    color: '#20325a',
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  subtitulo: {
-    color: '#20325a',
     fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: 8,
-    marginBottom: 10,
+    color: '#333333'
   },
-  vazio: {
-    color: '#666666',
-    fontSize: 16,
-    marginBottom: 10,
+  numero: {
+    fontSize: 48,
+    fontWeight: 'bold',
+    color: '#4caf50',
+    marginBottom: 24
+  },
+  botoesContainer: {
+    width: '100%',
+    maxWidth: 360,
+    gap: 10
   },
   botao: {
-    alignItems: 'center',
-    backgroundColor: '#20325a',
-    borderRadius: 8,
-    marginTop: 14,
-    padding: 15,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 10,
+    alignItems: 'center'
+  },
+  botaoIncrementar: {
+    backgroundColor: '#2e7d32'
+  },
+  botaoDecrementar: {
+    backgroundColor: '#c62828'
+  },
+  botaoZerar: {
+    backgroundColor: '#455a64'
   },
   botaoTexto: {
     color: '#ffffff',
     fontSize: 16,
-    fontWeight: 'bold',
-  },
+    fontWeight: 'bold'
+  }
 });
