@@ -1,0 +1,8 @@
+{
+  "name": "pratica-04",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": { "start": "expo start", "web": "expo start --web", "android": "expo start --android", "ios": "expo start --ios", "test": "node --test tests/urna.test.cjs" },
+  "dependencies": { "expo": "~57.0.11", "react": "19.2.3", "react-dom": "19.2.3", "react-native": "0.86.2", "react-native-web": "^0.21.2" }
+}
