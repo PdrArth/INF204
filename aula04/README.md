@@ -29,12 +29,23 @@ npx expo export --platform web
 
 O teste automatizado verifica os callbacks e a renderização lógica com componentes nativos simulados; não substitui teste em aparelho.
 
-## Arquivos
+## Material de estudo
+
+Os PDFs estão separados por finalidade, como uma pequena apostila:
+
+1. `Guia-01-Aprenda-Conceitos-PT04.pdf`: explica o que é State, Props, useState, callback, re-renderização e dados derivados.
+2. `Guia-02-Codigo-Explicado-PT04.pdf`: acompanha os trechos reais do `App.js` e explica o que cada parte faz.
+3. `Guia-03-Faca-Passo-a-Passo-PT04.pdf`: mostra como criar, abrir, executar e testar o projeto.
+4. `Guia-04-Teste-Entrega-Erros-PT04.pdf`: traz checklist, testes, Git, branches e soluções para erros comuns.
+
+Leia na ordem 01, 02, 03 e 04 para estudar do conceito até a entrega.
+
+## Arquivos do projeto
 
 - `App.js`: tela, componente Candidato, estados, eventos e estilos.
 - `app.json`: nome e configuração Expo.
 - `package.json` e `package-lock.json`: comandos e dependências.
 - `tests/urna.test.cjs`: testes de comportamento.
-- `Guia-Pratica04.pdf`: explicações curtas com analogias.
+- `Guia-*.pdf`: coleção de materiais de estudo da Prática 04.
 
 Branch: `feature/pratica-04`. Apenas `aula04` pertence a esta branch.
