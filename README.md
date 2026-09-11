@@ -44,6 +44,11 @@ As pastas das aulas foram configuradas com Git worktrees. Cada pasta está perma
 
 As pastas `aula01`, `aula02`, `aula03` e `aula04` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
 
-A Aula 4 inclui o documento [Guia simples da Prática 04](https://github.com/PdrArth/INF204/blob/feature/pratica-04/aula04/Guia-Pratica04.pdf), com exemplos e analogias sobre estados, props, callbacks e dados derivados.
+A Aula 4 inclui uma coleção de materiais em PDF:
+
+- [01 - Aprenda os conceitos](https://github.com/PdrArth/INF204/blob/feature/pratica-04/aula04/Guia-01-Aprenda-Conceitos-PT04.pdf)
+- [02 - Código explicado](https://github.com/PdrArth/INF204/blob/feature/pratica-04/aula04/Guia-02-Codigo-Explicado-PT04.pdf)
+- [03 - Faça passo a passo](https://github.com/PdrArth/INF204/blob/feature/pratica-04/aula04/Guia-03-Faca-Passo-a-Passo-PT04.pdf)
+- [04 - Teste, entrega e erros](https://github.com/PdrArth/INF204/blob/feature/pratica-04/aula04/Guia-04-Teste-Entrega-Erros-PT04.pdf)
 
 O GitHub pode mostrar o botão **Compare & pull request** quando uma branch possui conteúdo diferente da `main`. Isso é normal e não representa erro ou arquivo duplicado. Um Pull Request só precisa ser criado quando for solicitado pelo professor.
