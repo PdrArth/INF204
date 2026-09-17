@@ -18,6 +18,7 @@ A branch `main` contém apenas este arquivo de orientação. Cada prática fica 
 | `feature/pratica-02` | Projeto da Aula 2 | `INF204-aula02` |
 | `feature/pratica-03` | Perfis editáveis e jogo da velha da Aula 3 | `INF204-aula03` |
 | `feature/pratica-04` | Urna, estados, porcentagens e mesário | `INF204-aula04` |
+| `feature/pratica-05` | Agenda telefônica com FlatList | `INF204-aula05` |
 
 As próximas aulas devem seguir o padrão `feature/pratica-N`, mantendo somente a pasta correspondente àquela prática.
 
@@ -31,6 +32,14 @@ npm install
 npx expo start
 ```
 
+Para a Aula 5:
+
+```powershell
+cd C:\Users\pedro\Downloads\INF204-aula05\aula05
+npm install
+npm start
+```
+
 Depois que o Expo iniciar:
 
 - Pressione `w` para abrir no navegador.
@@ -42,7 +51,7 @@ As pastas das aulas foram configuradas com Git worktrees. Cada pasta está perma
 
 ## Compare & pull request
 
-As pastas `aula01`, `aula02`, `aula03` e `aula04` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
+As pastas `aula01`, `aula02`, `aula03`, `aula04` e `aula05` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
 
 A Aula 4 inclui uma coleção de materiais em PDF:
 
