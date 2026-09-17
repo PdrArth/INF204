@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Prática 05 - Agenda",
+    "slug": "pratica-05",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}
