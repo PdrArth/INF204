@@ -19,6 +19,7 @@ A branch `main` contém apenas este arquivo de orientação. Cada prática fica 
 | `feature/pratica-03` | Perfis editáveis e jogo da velha da Aula 3 | `INF204-aula03` |
 | `feature/pratica-04` | Urna, estados, porcentagens e mesário | `INF204-aula04` |
 | `feature/pratica-05` | Agenda telefônica com FlatList | `INF204-aula05` |
+| `feature/pratica-06` | Navegação tipada com Stack e Bottom Tabs | `INF204-aula06` |
 
 As próximas aulas devem seguir o padrão `feature/pratica-N`, mantendo somente a pasta correspondente àquela prática.
 
@@ -40,6 +41,14 @@ npm install
 npm start
 ```
 
+Para a Aula 6:
+
+```powershell
+cd C:\Users\pedro\Downloads\INF204-aula06\aula06
+npm install
+npx expo start --tunnel
+```
+
 Depois que o Expo iniciar:
 
 - Pressione `w` para abrir no navegador.
@@ -51,7 +60,9 @@ As pastas das aulas foram configuradas com Git worktrees. Cada pasta está perma
 
 ## Compare & pull request
 
-As pastas `aula01`, `aula02`, `aula03`, `aula04` e `aula05` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
+As pastas `aula01`, `aula02`, `aula03`, `aula04`, `aula05` e `aula06` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
+
+A Aula 6 usa TypeScript e uma arquitetura separada em `src/routes`, `src/screens`, `src/types` e `src/theme`. O `RootNavigator` mantém a pilha principal, o `AppTabs` mantém as abas e as telas ficam isoladas dos arquivos de configuração das rotas.
 
 A Aula 4 inclui uma coleção de materiais em PDF:
 
