@@ -22,7 +22,9 @@ Copy-Item .env.example .env
 npm start
 ```
 
-O `.env` já está preparado neste computador. Em outro clone, copie o exemplo antes de iniciar. `npm start` usa `expo start --tunnel ngrok`: escaneie o QR no Expo Go compatível com o SDK 58. O celular pode usar outra Wi-Fi ou dados móveis. Mantenha computador e terminal ligados e conectados à internet. O endereço é temporário; redes que bloqueiam o serviço de túnel ainda podem impedir a conexão.
+O `.env` já está preparado neste computador. Em outro clone, copie o exemplo antes de iniciar. `npm start` usa `expo start --tunnel`: escaneie o QR no Expo Go compatível com o SDK 57. O celular pode usar outra Wi-Fi ou dados móveis. Mantenha computador e terminal ligados e conectados à internet. O endereço é temporário; redes que bloqueiam o serviço de túnel ainda podem impedir a conexão.
+
+O projeto foi alinhado ao SDK 57 informado pelo aluno. Se o Expo Go disser que a versão é incompatível, confira o SDK suportado no erro: trocar de Wi-Fi ou escanear de novo não resolve uma diferença de SDK. Referência: [compatibilidade do Expo Go](https://docs.expo.dev/troubleshooting/expo-go-version-mismatch/).
 
 Para navegador: `npm run web`. Para a mesma rede local: `npm run start:lan`.
 
