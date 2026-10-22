@@ -2,7 +2,16 @@
 
 Pedro Arthur | INF204 | JavaScript, React Native e Expo
 
-Aplicativo **Pessoas**: consulta usuários fictícios no JSONPlaceholder e exibe nome e e-mail. Implementa os passos principais do roteiro da Prática 07. Os desafios de pull-to-refresh, formulário POST e versão TypeScript ficam para uma etapa futura.
+Aplicativo **Caderneta**: agenda com visual de papel, lista alfabética e consulta de usuários fictícios no JSONPlaceholder. Mantém o consumo de API da Prática 07 e acrescenta busca, favoritos locais e ficha do contato. Os desafios de pull-to-refresh, formulário POST e versão TypeScript ficam para uma etapa futura.
+
+## O que dá para fazer
+
+- Buscar por nome, e-mail, empresa ou cidade. A busca ignora acentos e pode combinar palavras, como `vicosa cafe`.
+- Marcar uma estrela e filtrar os favoritos. Eles são salvos no aparelho usando AsyncStorage; no navegador, são locais àquele navegador/endereço.
+- Tocar no contato para abrir a ficha com e-mail, telefone, empresa, endereço e site, quando a API fornece esses dados. Toque em Fechar, no fundo ou use o botão Voltar do Android para sair.
+- Atualizar a consulta pelo botão no rodapé e ver o horário da última resposta. Se a atualização falhar, a lista anterior continua disponível.
+
+Os favoritos não são enviados à API. O aplicativo não baixa a agenda real do celular e não salva os contatos para consulta offline: a lista ainda depende de uma resposta da API.
 
 ## Executar no celular, inclusive em outra rede
 
@@ -23,7 +32,7 @@ Para navegador: `npm run web`. Para a mesma rede local: `npm run start:lan`.
 2. `getUsers` usa a instância Axios configurada em `api.js` e faz `GET /users`.
 3. `ActivityIndicator` informa que a consulta está em andamento.
 4. `try/catch/finally` controla sucesso, erro e encerramento do carregamento.
-5. `FlatList` mostra cartões com nomes e e-mails, usando o ID como chave.
+5. `FlatList` mostra os nomes e e-mails em ordem alfabética, usando o ID como chave.
 
 Além dos passos principais, há mensagem de lista vazia, erros legíveis, botão para tentar novamente, prazo de 10 segundos e cancelamento ao sair da tela. Nenhum cadastro é enviado para a API.
 
@@ -36,12 +45,17 @@ aula07/
     services/
       api.js                   # Axios: URL, timeout e headers
       users.js                 # GET /users, validacao e mensagens
+      favorites.js             # leitura e gravacao dos favoritos
+    hooks/useFavorites.js      # estado local e gravacoes em ordem
+    utils/contacts.js          # busca sem acentos e ordenacao
     screens/UsersScreen.js     # estado, efeito e lista
     components/
-      UserCard.js              # cartao de usuario
+      UserCard.js              # linha de contato e estrela
+      ContactSheet.js          # ficha do contato em modal
       ListFeedback.js          # carregamento, erro e lista vazia
     theme.js                   # cores compartilhadas
   tests/users.test.mjs          # pedidos HTTP contra servidor local
+  tests/contacts.test.mjs       # busca, filtros e armazenamento
   .env.example                 # exemplo publico da configuracao
 ```
 
@@ -64,6 +78,8 @@ npm run build:web
 ```
 
 Os testes usam um servidor local e verificam sucesso, lista vazia, HTTP 503, resposta inválida, timeout, recuperação, cancelamento e ausência de configuração. Para conferir no celular: abra o QR, aguarde os contatos e role a lista. Sem internet, a tela apresenta erro e permite tentar novamente depois de reconectar.
+
+Também há testes de busca sem acentos, ordenação, combinação de favoritos com busca, persistência e falha de armazenamento. Na verificação de interface foram exercitados busca por empresa/cidade, favorito após recarregar, ficha com campos opcionais, atualização com falha e tela de 320 px.
 
 Na instalação de 22/10/2026, `npm audit` apontou alertas em dependências transitivas do Expo/Metro e do ngrok. As versões compatíveis do SDK foram mantidas; os downgrades incompatíveis sugeridos por `--force` não foram aplicados.
 

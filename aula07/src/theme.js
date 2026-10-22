@@ -1,10 +1,14 @@
+import { Platform } from 'react-native';
+
 export const colors = {
-  background: '#F3F6FA',
-  surface: '#FFFFFF',
-  text: '#18324A',
-  muted: '#5C7185',
-  primary: '#176B9E',
-  soft: '#E4EFF7',
-  border: '#DBE5EE',
-  error: '#A4423A',
+  background: '#F6F3EC',
+  surface: '#FFFDFA',
+  text: '#292A25',
+  muted: '#69695F',
+  primary: '#A33E24',
+  soft: '#EFE5D7',
+  border: '#DAD5C9',
+  error: '#9B392A',
 };
+
+export const headingFont = Platform.select({ ios: 'Georgia', android: 'serif', default: 'Georgia' });
