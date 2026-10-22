@@ -20,7 +20,7 @@ A branch `main` contém apenas este arquivo de orientação. Cada prática fica 
 | `feature/pratica-04` | Urna, estados, porcentagens e mesário | `INF204-aula04` |
 | `feature/pratica-05` | Agenda telefônica com FlatList | `INF204-aula05` |
 | `feature/pratica-06` | Navegação tipada com Stack e Bottom Tabs | `INF204-aula06` |
-| `feature/pratica-07` | Consulta de usuários com Axios e estados de carregamento | `INF204-aula07` |
+| `feature/pratica-07` | Caderneta: API, busca, favoritos e ficha de contatos | `INF204-aula07` |
 
 As próximas aulas devem seguir o padrão `feature/pratica-N`, mantendo somente a pasta correspondente àquela prática.
 
