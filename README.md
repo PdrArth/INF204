@@ -20,6 +20,7 @@ A branch `main` contém apenas este arquivo de orientação. Cada prática fica 
 | `feature/pratica-04` | Urna, estados, porcentagens e mesário | `INF204-aula04` |
 | `feature/pratica-05` | Agenda telefônica com FlatList | `INF204-aula05` |
 | `feature/pratica-06` | Navegação tipada com Stack e Bottom Tabs | `INF204-aula06` |
+| `feature/pratica-07` | Consulta de usuários com Axios e estados de carregamento | `INF204-aula07` |
 
 As próximas aulas devem seguir o padrão `feature/pratica-N`, mantendo somente a pasta correspondente àquela prática.
 
@@ -54,13 +55,25 @@ Depois que o Expo iniciar:
 - Pressione `w` para abrir no navegador.
 - Ou escaneie o QR Code usando o aplicativo Expo Go.
 
+Para a Prática 7 (consumo de API):
+
+```powershell
+cd C:\Users\pedro\Downloads\INF204-aula07\aula07
+npm install
+# Somente em um clone novo; neste computador o .env já está pronto:
+Copy-Item .env.example .env
+npm start
+```
+
+O comando `npm start` da Prática 7 já usa túnel. O celular pode estar em outra rede com internet; mantenha o computador e o terminal ligados. A URL da API é configurada no `.env` local. O [README da Prática 7](https://github.com/PdrArth/INF204/tree/feature/pratica-07/aula07) explica a arquitetura e os testes.
+
 ## Como funcionam as pastas
 
 As pastas das aulas foram configuradas com Git worktrees. Cada pasta está permanentemente vinculada à sua própria branch. Dessa forma, não é necessário executar `git switch` para alternar entre as aulas: basta abrir a pasta correspondente.
 
 ## Compare & pull request
 
-As pastas `aula01`, `aula02`, `aula03`, `aula04`, `aula05` e `aula06` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
+As pastas `aula01`, `aula02`, `aula03`, `aula04`, `aula05`, `aula06` e `aula07` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
 
 A Aula 6 usa TypeScript e uma arquitetura separada em `src/routes`, `src/screens`, `src/types` e `src/theme`. O `RootNavigator` mantém a pilha principal, o `AppTabs` mantém as abas e as telas ficam isoladas dos arquivos de configuração das rotas.
 
