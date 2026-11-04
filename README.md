@@ -21,6 +21,7 @@ A branch `main` contém apenas este arquivo de orientação. Cada prática fica 
 | `feature/pratica-05` | Agenda telefônica com FlatList | `INF204-aula05` |
 | `feature/pratica-06` | Navegação tipada com Stack e Bottom Tabs | `INF204-aula06` |
 | `feature/pratica-07` | Caderneta: API, busca, favoritos e ficha de contatos | `INF204-aula07` |
+| `feature/pratica-08` | Tarefas locais com SQLite e nome salvo no AsyncStorage | `INF204-aula08` |
 
 As próximas aulas devem seguir o padrão `feature/pratica-N`, mantendo somente a pasta correspondente àquela prática.
 
@@ -67,13 +68,23 @@ npm start
 
 O comando `npm start` da Prática 7 já usa túnel. O celular pode estar em outra rede com internet; mantenha o computador e o terminal ligados. A URL da API é configurada no `.env` local. O [README da Prática 7](https://github.com/PdrArth/INF204/tree/feature/pratica-07/aula07) explica a arquitetura e os testes.
 
+Para a Prática 8 (persistência local):
+
+```powershell
+cd C:\Users\pedro\Downloads\INF204-aula08\aula08
+npm install
+npm start
+```
+
+A Prática 8 usa Expo SDK 57 e túnel Cloudflare, sem exigir a mesma Wi-Fi. O comando inicia o Expo e mostra o QR; a versão de navegador fica em `http://localhost:8089`. As tarefas e a conclusão ficam em SQLite; o nome do usuário fica em AsyncStorage. O [README da Prática 8](https://github.com/PdrArth/INF204/tree/feature/pratica-08/aula08) traz a arquitetura, os testes e a configuração de SQLite para navegador.
+
 ## Como funcionam as pastas
 
 As pastas das aulas foram configuradas com Git worktrees. Cada pasta está permanentemente vinculada à sua própria branch. Dessa forma, não é necessário executar `git switch` para alternar entre as aulas: basta abrir a pasta correspondente.
 
 ## Compare & pull request
 
-As pastas `aula01`, `aula02`, `aula03`, `aula04`, `aula05`, `aula06` e `aula07` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
+As pastas `aula01`, `aula02`, `aula03`, `aula04`, `aula05`, `aula06`, `aula07` e `aula08` na pasta principal do PC são atalhos locais para os códigos reais. Para commits e comandos Git de uma aula, use a pasta `INF204-aulaNN` correspondente. Os atalhos são ignorados pelo Git.
 
 A Aula 6 usa TypeScript e uma arquitetura separada em `src/routes`, `src/screens`, `src/types` e `src/theme`. O `RootNavigator` mantém a pilha principal, o `AppTabs` mantém as abas e as telas ficam isoladas dos arquivos de configuração das rotas.
 
