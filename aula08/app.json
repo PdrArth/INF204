@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Tarefas - Prática 08",
+    "slug": "inf204-pratica-08",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FAFBF9"
+  }
+}

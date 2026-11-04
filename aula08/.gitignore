@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+.expo/
+dist/
+test-results/
+*.log
+*.db
+*.db-shm
+*.db-wal
